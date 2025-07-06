@@ -6,6 +6,19 @@ minio:
     enabled: true
     path: /
     hosts:
+      - storage.mabecenter.org
+    tls:
+      - hosts:
+          - storage.mabecenter.org
+        secretName: tls-cert
+    annotations: {}
+    labels: {}
+    ingressClassName: "traefik"
+
+  consoleIngress:
+    enabled: true
+    path: /
+    hosts:
       - minio.mabecenter.org
     tls:
       - hosts:
@@ -14,10 +27,5 @@ minio:
     annotations: {}
     labels: {}
     ingressClassName: "traefik"
-
-  resources:
-    requests:
-      memory: 8Gi
-
-  accessKey: "minio-access-key"
-  secretKey: "minio-secret-key"
+  
+  existingSecret: minio-existing-secret
