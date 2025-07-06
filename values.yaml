@@ -1,4 +1,6 @@
 minio:
+  mode: standalone
+
   ingress:
     enabled: true
     path: /
@@ -19,11 +21,7 @@ minio:
 
   resources:
     requests:
-      memory: "8Gi"
-      cpu: "1"
-    limits:
-      memory: "8Gi"
-      cpu: "2"
+      memory: 8Gi
 
   accessKey: "minio-access-key"
   secretKey: "minio-secret-key"
