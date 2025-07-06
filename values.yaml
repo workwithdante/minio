@@ -15,7 +15,7 @@ minio:
   persistence:
     storageClass: "nfs"
     enabled: true
-    size: 10Gi
+    size: 1Gi
 
   resources:
     requests:
