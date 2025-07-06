@@ -5,6 +5,6 @@ type: application
 version: 0.1.0
 
 dependencies:
-  - name: aistor-objectstore-operator
-    version: "4.1.1"  # Especifica la versión del chart de Forgejo que deseas usar
-    repository: "https://helm.min.io/"  # URL del repositorio de Forgejo
+  - name: minio-operator
+    version: "4.3.7"
+    repository: "https://operator.min.io/"  # URL del repositorio de Forgejo
