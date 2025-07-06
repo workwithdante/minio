@@ -5,6 +5,6 @@ type: application
 version: 0.1.0
 
 dependencies:
-  - name: minio-operator
-    version: "4.3.7"
-    repository: "https://operator.min.io/"  # URL del repositorio de Forgejo
+  - name: minio
+    version: "latest"
+    repository: "https://charts.min.io"  # URL del repositorio de Forgejo
