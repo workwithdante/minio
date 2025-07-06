@@ -13,7 +13,11 @@ minio-operator:
       - secretName: tls-cert  # Certificado TLS para la conexión segura
         hosts:
           - minio.mabecenter.org
-
+  
+  persistence:
+  storageClass: "nfs"
+  enabled: true
+  size: 10Gi
 
   accessKey: "minio-access-key"
   secretKey: "minio-secret-key"
