@@ -1,19 +1,18 @@
 minio:
   ingress:
     enabled: true
-    ingressClassName: "traefik"
+    ingressClassName: "traefik"  # Usar Traefik como controlador de Ingress
     annotations:
       kubernetes.io/ingress.class: "traefik"
     hosts:
       - host: minio.mabecenter.org  # El dominio donde se accederá a MinIO
         paths:
           - path: /
-            pathType: Prefix # Simplificado a solo el nombre del host
+            pathType: Prefix
     tls:
-      - secretName: tls-cert
+      - secretName: tls-cert  # Certificado TLS para la conexión segura
         hosts:
           - minio.mabecenter.org
-
   persistence:
     storageClass: "nfs"
     enabled: true
