@@ -6,10 +6,10 @@ minio:
     enabled: true
     path: /
     hosts:
-      - storage.mabecenter.org
+      - minio.mabecenter.org
     tls:
       - hosts:
-          - storage.mabecenter.org
+          - minio.mabecenter.org
         secretName: tls-cert
     annotations: {}
     labels: {}
@@ -19,10 +19,10 @@ minio:
     enabled: true
     path: /
     hosts:
-      - minio.mabecenter.org
+      - minio-console.mabecenter.org
     tls:
       - hosts:
-          - minio.mabecenter.org
+          - minio-console.mabecenter.org
         secretName: tls-cert
     annotations: {}
     labels: {}
