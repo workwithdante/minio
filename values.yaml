@@ -19,9 +19,5 @@ minio:
     requests:
       memory: 8Gi
 
-  priorityClassName: "low-priority"  # Configurar baja prioridad para MinIO
-
-  preemptionPolicy: "PreemptLowerPriority"  # Permitir preempción de pods
-
   accessKey: "minio-access-key"
   secretKey: "minio-secret-key"
