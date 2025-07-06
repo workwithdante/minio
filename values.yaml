@@ -5,7 +5,10 @@ minio:
     annotations:
       kubernetes.io/ingress.class: "traefik"
     hosts:
-      - minio.mabecenter.org  # Simplificado a solo el nombre del host
+      - host: minio.mabecenter.org  # El dominio donde se accederá a MinIO
+        paths:
+          - path: /
+            pathType: Prefix # Simplificado a solo el nombre del host
     tls:
       - secretName: tls-cert
         hosts:
