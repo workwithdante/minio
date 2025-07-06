@@ -1,0 +1,10 @@
+apiVersion: v2
+name: minio-sierra-group
+description: Wrapper chart for Minio
+type: application
+version: 0.1.0
+
+dependencies:
+  - name: minio
+    version: "latest"  # Especifica la versión del chart de Forgejo que deseas usar
+    repository: "https://helm.min.io/"  # URL del repositorio de Forgejo
