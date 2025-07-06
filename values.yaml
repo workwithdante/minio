@@ -1,18 +1,20 @@
 operators:
-  ingress:
-    enabled: true
-    ingressClassName: "traefik"  # Usar Traefik como controlador de Ingress
-    annotations:
-      kubernetes.io/ingress.class: "traefik"
-    hosts:
-      - host: minio.mabecenter.org  # El dominio donde se accederá a Forgejo
-        paths:
-          - path: /
-            pathType: Prefix
-    tls:
-      - secretName: tls-cert  # Certificado TLS para la conexión segura
-        hosts:
-          - minio.mabecenter.org
+  object-store:
+    ingress:
+      enabled: true
+      ingressClassName: "traefik"  # Usar Traefik como controlador de Ingress
+      annotations:
+        kubernetes.io/ingress.class: "traefik"
+      hosts:
+        - host: minio.mabecenter.org  # El dominio donde se accederá a MinIO
+          paths:
+            - path: /
+              pathType: Prefix
+      tls:
+        - secretName: tls-cert  # Certificado TLS para la conexión segura
+          hosts:
+            - minio.mabecenter.org
+
 
   accessKey: "minio-access-key"
   secretKey: "minio-secret-key"
