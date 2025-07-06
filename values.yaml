@@ -1,4 +1,4 @@
-s:
+minio-operator:
   ingress:
     enabled: true
     ingressClassName: "traefik"  # Usar Traefik como controlador de Ingress
