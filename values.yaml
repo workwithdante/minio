@@ -27,5 +27,9 @@ minio:
     annotations: {}
     labels: {}
     ingressClassName: "traefik"
+
+  resources:
+    requests:
+      memory: 8Gi
   
   existingSecret: minio-existing-secret
