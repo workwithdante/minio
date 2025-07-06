@@ -15,9 +15,9 @@ minio-operator:
           - minio.mabecenter.org
   
   persistence:
-  storageClass: "nfs"
-  enabled: true
-  size: 10Gi
+    storageClass: "nfs"
+    enabled: true
+    size: 10Gi
 
   accessKey: "minio-access-key"
   secretKey: "minio-secret-key"
