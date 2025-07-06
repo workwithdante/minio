@@ -17,5 +17,13 @@ minio:
     enabled: true
     size: 10Gi
 
+  resources:
+    requests:
+      memory: "8Gi"
+      cpu: "1"
+    limits:
+      memory: "8Gi"
+      cpu: "2"
+
   accessKey: "minio-access-key"
   secretKey: "minio-secret-key"
