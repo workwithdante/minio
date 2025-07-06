@@ -15,11 +15,6 @@ minio:
     labels: {}
     ingressClassName: "traefik"
 
-  persistence:
-    storageClass: "nfs"
-    enabled: true
-    size: 1Gi
-
   resources:
     requests:
       memory: 8Gi
