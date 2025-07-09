@@ -10,8 +10,6 @@ minio:
     tls:
       - hosts:
           - minio.mabecenter.org
-    annotations: {}
-    labels: {}
     ingressClassName: "traefik"
 
   consoleIngress:
@@ -22,8 +20,6 @@ minio:
     tls:
       - hosts:
           - minio-console.mabecenter.org
-    annotations: {}
-    labels: {}
     ingressClassName: "traefik"
 
   resources:
